@@ -1,10 +1,10 @@
 <div class="card">
             <div class="img">
-                <img src="/img/me.png" alt="Chetan Waghade">
+                <img src="{{item.item_image_url}}" alt="Chetan Waghade">
             </div>
             <div class="description">
-                <h3>Sexy Boi</h3>
-                <p>Price : 345$</p>
+                <h3>{{item.item_name}}</h3>
+                <p>{{item.item_price}}</p>
             </div>
             <div class="controls">
                 <div class="quantity">
@@ -13,7 +13,7 @@
                     <button>+</button>
                 </div>
                 <div class="actions">
-                    <button>Add</button>
+                    <button>Add +</button>
                 </div>
             </div>
 </div>

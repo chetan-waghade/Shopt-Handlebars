@@ -13,48 +13,82 @@
     <main>
         {{!-- Filters --}}
         <aside>
-            <h1>
-                Filters
-            </h1>
+            <div class="label">
+                <div>
+                <h1>
+                Filters 
+                </h1>
+                
+                </div>
+            <a href="#">Clear All</a>
+            </div>
             {{!-- List --}}
             <div>
                 <ul>
-                    <li>
+                    <li class="separator">
                         <div class="sub_categories">
-                            <p>Sizes</p> <span>+</span>
+                            <p>Sizes</p> <span id="sizes_collapse">+</span>
                         </div>
-                        <ul class="sizes">
+                        <ul class="sizes hidden">
                             <li><a href="#">X</a></li>
                             <li><a href="#">M</a></li>
                             <li><a href="#">L</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="separator">
                         <div class="sub_categories">
-                            <p>Color</p> <span>+</span>
+                            <p>Color</p> <span id="colors_collapse">+</span>
                         </div>
-                        <ul class="colors">
-                            <li><span class="box white"></span></li>
-                            <li><span class="box white"></span></li>
-                            <li><span class="box white"></span></li>
-                            <li><span class="box white"></span></li>
+                        <ul class="colors hidden">
+                            <li><a class="box white"></a></li>
+                            <li><a class="box black"></a></li>
+                            <li><a class="box olive"></a></li>
+                            <li><a class="box grey"></a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="sub_categories">
-                            <p>Sort By</p> <span>+</span>
+                            <p>Sort By</p> <span id="sort_by_collapse">+</span>
                         </div>
+                        <ul class="sort_by hidden">
+                            <li><a href="">Popular</a></li>
+                            <li><a href="">New</a></li>
+                            <li><a href="">Price: Low to High</a></li>
+                            <li><a href="">Price: High to Low</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </aside>
         {{!-- Item list --}}
         <section>
-            {{>card}}
+            <div class="title">
+                <h1>Menswear</h1>
+                <span class="short_bottom_border"></span>
+            </div>
+            <div class="sub_wears">
+                <ul>
+                    <li><a href="#">Topwear</a></li>
+                    <li><a href="#">Bottomwear</a></li>
+                    <li><a href="#">Footwear</a></li>
+
+                </ul>
+                <p>Showing results (1300)</p>
+            </div>
+            <div class="items-list">
+                {{!-- Print list of items --}}
+                {{#each results}}
+                {{!-- Send custom data via hashed parameter --}}
+                {{>card item=this}}
+                {{/each}}
+            </div>
         </section>
         
         
     </main>
     {{>footer}}
+
+    <script src="/js/filters.js"></script>r
+
 </body>
 </html>

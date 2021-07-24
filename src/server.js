@@ -29,7 +29,39 @@ app.get('', (req, res) => {
 
 // Men
 app.get('/men', (req, res) => {
-    res.render("men");
+
+    const items = [
+        {
+            id: 0,
+            item_name: 'Wildcat Tshirt YD',
+            item_image_url: 'https://images.pexels.com/photos/3193731/pexels-photo-3193731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            item_price: '345$'
+
+        },
+        {
+            id: 1,
+            item_name: 'Oklyo Tuy Tshirt Yz',
+            item_image_url: 'https://images.pexels.com/photos/1666073/pexels-photo-1666073.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            item_price: '405$'
+
+        },
+        {
+            id: 2,
+            item_name: 'WebRyte XZ Pant',
+            item_image_url: 'https://images.pexels.com/photos/3828245/pexels-photo-3828245.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            item_price: '700$'
+
+        },
+        {
+            id: 3,
+            item_name: 'Mintrat HelloKitty Shirt',
+            item_image_url: 'https://images.pexels.com/photos/4352249/pexels-photo-4352249.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+            item_price: '800$'
+
+        },
+    ]
+
+    res.render("men", { results: items });
 })
 
 // Woman
