@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>links}}
+    <link rel="stylesheet" href="/css/men.css">
+    <title>Men | Shopt</title>
+</head>
+<body>
+     {{>header}}
+    <main>
+        {{!-- Filters --}}
+        <aside>
+            <h1>
+                Filters
+            </h1>
+            {{!-- List --}}
+            <div>
+                <ul>
+                    <li>
+                        <div class="sub_categories">
+                            <p>Sizes</p> <span>+</span>
+                        </div>
+                        <ul class="sizes">
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">L</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="sub_categories">
+                            <p>Color</p> <span>+</span>
+                        </div>
+                        <ul class="colors">
+                            <li><span class="box white"></span></li>
+                            <li><span class="box white"></span></li>
+                            <li><span class="box white"></span></li>
+                            <li><span class="box white"></span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="sub_categories">
+                            <p>Sort By</p> <span>+</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        {{!-- Item list --}}
+        <section>
+            {{>card}}
+        </section>
+        
+        
+    </main>
+    {{>footer}}
+</body>
+</html>

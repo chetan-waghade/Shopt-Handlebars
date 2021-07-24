@@ -1,0 +1,68 @@
+main{
+    display: flex;
+    justify-content: start;
+}
+
+
+/* Main */
+
+main aside{
+    /* border:1px solid purple; */
+    flex: 1;
+    padding:1rem;
+}
+
+main aside h1{
+    margin-bottom: 1rem;
+}
+
+main aside ul li{
+    margin: .5rem 0;
+}
+
+main aside .sub_categories{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+main aside ul li ul{
+    padding: 0 .5rem;
+    
+}
+
+main aside ul li ul li a{
+    color: #323634;
+    padding: 1rem;
+}
+
+main aside ul li ul li:hover{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+main aside .sub_categories span{
+    cursor: pointer;
+    font-weight: bold;
+    color:#323634;
+}
+
+/* Colors */
+.colors{
+    
+}
+
+/* Sub Categories Color boxes */
+.box {
+    display: inline-block;
+    width: 3vh;
+    height: 3vh;
+    border:1px solid red;
+}
+
+/* Section */
+
+main section{
+    /* border:2px solid red; */
+    flex-grow: 4;
+}

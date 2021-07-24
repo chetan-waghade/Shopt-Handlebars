@@ -1,0 +1,12 @@
+div.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+
+div.logo h1{
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+}

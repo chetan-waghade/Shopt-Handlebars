@@ -1,0 +1,59 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #14281d1a;
+}
+
+/* Main Menu */
+nav ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+ 
+}
+
+nav ul li {
+    padding: 1rem;
+}
+
+nav ul li a {
+    color:#14281D;
+}
+
+/* Sub Menu */
+nav ul li ul{
+   z-index: 2;
+   position: absolute;
+   top:3.3rem;
+   background-color: #F1F5F2;
+   visibility: hidden;
+   display: flex;
+   flex-direction: column;
+   box-shadow:0 15px 25px -13px rgba(0, 0, 0, 0.1);
+   border-radius: 0.5rem;
+   -webkit-border-radius: 0.5rem;
+   -moz-border-radius: 0.5rem;
+   -ms-border-radius: 0.5rem;
+   -o-border-radius: 0.5rem;
+   border:1px solid  #14281d1a;
+}
+
+nav ul li ul {
+
+   margin-left: -1rem;
+
+}
+
+nav ul li ul li a{
+    color:black;
+}
+
+nav ul li:hover{
+    background-color: #b2e0c7;
+}
+
+nav ul li:hover > ul {
+    visibility: visible;
+}
