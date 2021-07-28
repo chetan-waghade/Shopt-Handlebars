@@ -15,9 +15,9 @@
         <aside>
             <div class="label">
                 <div>
-                <h1>
+                <h3>
                 Filters 
-                </h1>
+                </h3>
                 
                 </div>
             <a href="#">Clear All</a>
@@ -73,7 +73,7 @@
                     <li><a href="#">Footwear</a></li>
 
                 </ul>
-                <p>Showing results (1300)</p>
+                <p>Showing results (<span>{{resultsCount}}</span>)</p>
             </div>
             <div class="items-list">
                 {{!-- Print list of items --}}
@@ -84,11 +84,13 @@
             </div>
         </section>
         
+        {{>login}}
         
     </main>
     {{>footer}}
 
-    <script src="/js/filters.js"></script>r
+    <script src="/js/filters.js"></script>
+    <script src="/js/modal.js"></script>
 
 </body>
 </html>

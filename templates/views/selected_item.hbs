@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>links}}
+    <link rel="stylesheet" href="/css/men.css">
+    <title>Men | Shopt</title>
+</head>
+<body>
+    {{>header}}
+    <main>
+        
+        {{!-- Item list --}}
+        <section>
+            <img src="{{item.product_image_url}}" alt=""/>
+            <h1>{{item.product_name}}</h1>
+            <p>{{item.product_price}}</p>
+        </section>
+        
+        {{>login}}
+        
+    </main>
+    {{>footer}}
+
+    <script src="/js/filters.js"></script>
+    <script src="/js/modal.js"></script>
+
+</body>
+</html>

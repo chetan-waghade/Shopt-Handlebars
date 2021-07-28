@@ -1,6 +1,7 @@
 main{
     display: flex;
     justify-content: start;
+    padding-top: 4rem;
 }
 
 
@@ -23,7 +24,8 @@ main aside .label{
     color:#323634
 }
 
-main aside h1{
+main aside h3{
+    font-weight: 400;
     margin-bottom: 1rem;
     font-weight: 300;
 }
@@ -184,8 +186,177 @@ section .sub_wears p{
 }
 
 section .items-list{
-    display: flex;
-    justify-content: flex-start;
-    gap:2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.5rem;
 }
 
+.background-login-modal{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+.login-modal{
+    height: 50vh;
+    width: 30vw;
+    background-color: #fff;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    padding: 1rem;
+    /* box-shadow: -1px 20px 27px -29px rgba(0,0,0,0.57);
+    -webkit-box-shadow: -1px 20px 27px -29px rgba(0,0,0,0.57);
+    -moz-box-shadow: -1px 20px 27px -29px rgba(0,0,0,0.57);
+    box-shadow: 1px -20px 27px -29px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 1px -20px 27px -29px rgba(0,0,0,0.57);
+    -moz-box-shadow: 1px -20px 27px -29px rgba(0,0,0,0.57); */
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.login-modal div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+}
+
+.login-modal div:first-child button{
+    background-color: transparent;
+    padding: .2rem .4rem;
+    color:#32363481 !important; 
+    border: none;
+    cursor: pointer;
+}
+
+div.login-modal .welcome{
+    font-size: 1.5rem;
+    color:#323634c5;
+    font-weight: 400;
+}
+
+div.login-modal form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+div.login-modal form .form-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+form #username,#password{
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+    color: #323634;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Karla', sans-serif;
+    background-color: #F1F5F2;
+
+
+}
+
+form #username:focus,#password:focus{
+    border:1px solid #355834;
+}
+
+form input[type="submit"]{
+    background-color: #355834;
+    color: white;
+
+    border:none;
+    padding: 1rem 2rem;
+    margin-top: 0.5rem;
+
+    cursor: pointer;
+
+    font-size: .9rem;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: .12rem;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+   
+    
+}
+
+form input[type="submit"]:hover{
+    background-color: #355834ea;
+}
+
+form div:nth-child(2){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  
+}
+
+form div:nth-child(2) a{
+    text-decoration: none;
+    color:#32363483;
+}
+
+form p{
+    align-self: center;
+}
+
+div.sign-up-options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.sign-up-options p{
+    color: #323634a8;
+    font-size: 1.2rem;
+}
+
+div.sign-up-options .social-login{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+div.sign-up-options .social-login a span i{
+    font-size: 2rem;
+    color: #C2A878;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+div.sign-up-options .social-login a:hover > span i{
+    color: #355834;
+}

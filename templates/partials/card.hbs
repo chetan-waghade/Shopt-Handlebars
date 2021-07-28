@@ -1,12 +1,17 @@
+<a href="/men/{{item.product_name}}">
 <div class="card">
             <div class="img">
-                <img src="{{item.item_image_url}}" alt="Chetan Waghade">
+                {{#if item}}
+                <img src="{{item.product_image_url}}" alt="Chetan Waghade">
+                {{else}}
+                <p>Still Loading</p>
+                {{/if}}
             </div>
             <div class="description">
-                <h3>{{item.item_name}}</h3>
-                <p>{{item.item_price}}</p>
+                <h3>{{item.product_name}}</h3>
+                <b><p>$ {{item.product_price}} </p></b> 
             </div>
-            <div class="controls">
+            {{!-- <div class="controls">
                 <div class="quantity">
                     <button>-</button>
                     <span>1</span>
@@ -15,5 +20,6 @@
                 <div class="actions">
                     <button>Add +</button>
                 </div>
-            </div>
+            </div> --}}
 </div>
+</a>
